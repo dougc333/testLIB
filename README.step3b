@@ -1,0 +1,100 @@
+To debug the CJS version 
+
+> const foo = require('./src/index.cjs')
+/Users/dc/testLIB/src/index.cjs:1
+const uniqueRandomArray =require('unique-random-array')
+                         ^
+Uncaught:
+Error [ERR_REQUIRE_ESM]: require() of ES Module /Users/dc/testLIB/node_modules/unique-random-array/index.js from /Users/dc/testLIB/src/index.cjs not supported.
+Instead change the require of index.js in /Users/dc/testLIB/src/index.cjs to a dynamic import() which is available in all CommonJS modules.
+    
+
+This error message means the current install of unique-random-array supports es modules which is verified by going to the github and looking for docs
+
+https://github.com/sindresorhus/unique-random-array#readme
+The current version is 3.0.0 and the usage instructiosn are: 
+
+#Usage
+import uniqueRandomArray from 'unique-random-array';
+
+const random = uniqueRandomArray([1, 2, 3, 4]);
+
+console.log(random(), random(), random(), random());
+//=> 4 2 1 4
+
+however version 2.0.0 supports cjs
+https://github.com/sindresorhus/unique-random-array/tree/v2.0.0
+
+#Usage
+const uniqueRandomArray = require('unique-random-array');
+
+const random = uniqueRandomArray([1, 2, 3, 4]);
+
+console.log(random(), random(), random(), random());
+//=> 4 2 1 4
+
+so to get cjs working we can use version 2.0.0
+npm uninstall unique-random-array
+npm install unique-random-array@2.0.0
+
+DO NOT MANUALLY CHANGE the versions. USE npm to install and uninstall so it updates node_modules correctly
+
+➜  testLIB git:(step3b) ✗ node
+Welcome to Node.js v18.17.1.
+Type ".help" for more information.
+>  
+> const foo2 = require('./src/index.cjs')
+> foo2.data
+..
+{
+    id: 98,
+    first_name: 'Timmie',
+    last_name: 'Wemm',
+    email: 'twemm2p@icio.us',
+    gender: 'Female',
+    ip_address: '47.229.11.62'
+  },
+  {
+    id: 99,
+    first_name: 'Dolorita',
+    last_name: 'Barham',
+    email: 'dbarham2q@google.com.au',
+    gender: 'Genderfluid',
+    ip_address: '123.11.255.51'
+  },
+  {
+    id: 100,
+    first_name: 'Paulie',
+    last_name: 'Carlesso',
+    email: 'pcarlesso2r@amazon.co.jp',
+    gender: 'Male',
+    ip_address: '8.104.68.197'
+  },
+  ... 900 more items
+]
+
+
+> foo2.random()
+{
+  id: 297,
+  first_name: 'Lise',
+  last_name: 'Whopples',
+  email: 'lwhopples88@china.com.cn',
+  gender: 'Female',
+  ip_address: '194.141.179.50'
+}
+> 
+
+For index.mjs
+
+(node:60461) ExperimentalWarning: Import assertions are not a stable feature of the JavaScript language. Avoid relying on their current behavior and syntax as those might change in a future version of Node.js.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:60461) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+{
+  id: 249,
+  first_name: 'Etty',
+  last_name: 'Croxon',
+  email: 'ecroxon6w@prlog.org',
+  gender: 'Female',
+  ip_address: '42.137.181.233'
+}
