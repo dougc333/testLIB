@@ -1,0 +1,11 @@
+go to mockaroo.com and geneate a JSON dataset. put one copy in public for the server and one in src for importing
+import the json file direclty from the file in src/
+print out first element
+
+Node supports 2 modes, ES6 and CJS. the default js file suffix defaults to ES6 not cjs in node18. 
+
+
+
+
+This is different than browser code running in node using ES6. CJS is not supported
+

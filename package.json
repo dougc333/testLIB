@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/dougc333/testLIB/issues"
   },
-  "homepage": "https://github.com/dougc333/testLIB#readme"
+  "homepage": "https://github.com/dougc333/testLIB#readme",
+  "dependencies": {
+    "unique-random-array": "3.0.0"
+  }
 }
