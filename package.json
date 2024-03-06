@@ -1,0 +1,24 @@
+{
+  "name": "testlib",
+  "version": "1.0.0",
+  "description": "library setup for npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougc333/testLIB.git"
+  },
+  "keywords": [
+    "npm",
+    "library",
+    "development"
+  ],
+  "author": "doug chang <dougc@stanfordalumni.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dougc333/testLIB/issues"
+  },
+  "homepage": "https://github.com/dougc333/testLIB#readme"
+}
