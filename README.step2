@@ -1,0 +1,10 @@
+review .nvmrc
+npm config set init-license "MIT"
+
+configure npm using configure commaand until npm init produces a package.json with the correct defaults
+
+this is final .npmrc
+init-author-name=doug chang
+init-author-email=dougc@stanfordalumni.org
+save-exact=true
+init-license=MIT
