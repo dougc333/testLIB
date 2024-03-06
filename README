@@ -3,6 +3,10 @@ npm library framework js/ts
 branch step2: configure npm to generate correct package.json with defaults for
 author, license. After this step you should have a correct .npmrc with author
 name, a token which should not be published, and defaults for email. 
+added save-exact true which locks down installed packages to a specific version
+number like fs=3.4.5 instead of fs=^3.4.5 
+
+
 
 
 
