@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/dougc333/testLIB#readme",
   "dependencies": {
-    "unique-random-array": "2.0.0"
+    "unique-random-array": "3.0.0"
   }
 }
