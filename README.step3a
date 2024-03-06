@@ -1,0 +1,26 @@
+go to mockaroo.com and geneate a JSON dataset. put one copy in public for the server and one in src for importing
+import the json file direclty from the file in src/
+print out first element
+
+Node supports 2 modes, ES6 and CJS. the default js file suffix defaults to ES6 not cjs in node18. 
+
+1) import the data MOCK_DATA.json in get_data.mjs and print using es modules >node src/get_data.mjs
+2) import MOCK_DATA.json in get_data.cjs and print using node cjs. >node src/get_data.cjs
+3) import MOCK_DATA.json in get_data.js and print using >node src/get_data.js. The default with node 18 is not set so it generates an error
+
+For 2) in common js we are using module.exports and use the node CLI to print out the data. This is closer to library behavior where we ar exporting an object
+and letting the user print an object.
+node
+> const foo = require('./src/get_data.cjs;)
+>foo.data
+
+For 3) you have 2 options, change teh file name of get_data.js to get_data.mjs or change package.json to include "type":"module"/ Note the use of double quote strings. Single quote wont work
+ testLIB git:(step3a) ✗ node ./src/get_data.js
+/Users/dc/testLIB/src/get_data.js:1
+import data from './MOCK_DATA.json' assert { type: "json" };
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+
+This is different than browser code running in node using ES6. CJS is not supported
+
