@@ -1,3 +1,11 @@
-github library framework js/ts
+npm library framework js/ts
+
+branch step2: configure npm to generate correct package.json with defaults for
+author, license. After this step you should have a correct .npmrc with author
+name, a token which should not be published, and defaults for email. 
+
+
+
+
 
 
