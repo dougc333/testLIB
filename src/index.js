@@ -1,5 +1,5 @@
-import dataJSON from './MOCK_DATA.json' assert { type: "json" };
-import dataJSON2 from './starwars-names.json' assert { type: "json" };
+import dataJSON from './MOCK_DATA.json'; //assert { type: "json" };
+import dataJSON2 from './starwars-names.json'; //assert { type: "json" };
 
 import uniqueRandomArray from 'unique-random-array'
 
