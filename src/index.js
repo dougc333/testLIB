@@ -1,5 +1,11 @@
-import data from './MOCK_DATA.json' assert { type: "json" };
-import uniqueRandom from 'unique-random-array'
+import dataJSON from './MOCK_DATA.json' assert { type: "json" };
+import uniqueRandomArray from 'unique-random-array'
 
-//change package.json to type:module and put same code as index.mjs here. 
-console.log(data)
+export const API={
+  data:dataJSON,
+  random: uniqueRandomArray(dataJSON)
+}
+
+//console.log(API.data)
+//console.log("------")
+console.log((uniqueRandomArray(API.data)()))
