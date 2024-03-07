@@ -1,6 +1,7 @@
 add linting. Hard to test this. adding linting rules
-
 npm run lint, get rid of assert in get_data.js, index.js. 
+
+the linting rules conflict with node. node requires assert but eslint calls this an error. 
 
 import data from './MOCK_DATA.json' assert { type: "json" }
 which has an assert which is not necessary for node 18. But node generates an error message without it in different versions of node. 
