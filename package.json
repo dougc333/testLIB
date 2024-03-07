@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/dougc333/testLIB#readme",
   "dependencies": {
+    "nyc": "15.1.0",
     "unique-random-array": "3.0.0"
   },
   "devDependencies": {
