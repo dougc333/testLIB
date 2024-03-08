@@ -1,19 +1,15 @@
+'use strict';
 
-import { describe,it } from 'mocha'
-import {expect} from 'chai'
-import starWarsNames from './index.js'
-//import API from './index.js'
-
-console.log(starWarsNames.data)
-
+var expect = require('chai').expect;
+var starWarsNames = require('.');
 
 describe('starwars-names', function() {
   it('should have a list of all available names', function() {
-    expect(starWarsNames.data).to.satisfy(isArrayOfStrings);
+    expect(starWarsNames.all).to.satisfy(isArrayOfStrings);
   });
 
   it('should allow me to get a random name from the list', function() {
-    expect(starWarsNames.random()).to.satisfy(isIncludedIn(starWarsNames.data));
+    expect(starWarsNames.random()).to.satisfy(isIncludedIn(starWarsNames.all));
   });
 });
 

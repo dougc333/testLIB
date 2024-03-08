@@ -1,21 +1,9 @@
-//import dataJSON from './MOCK_DATA.json'; //assert { type: "json" };
-import dataJSON2 from './starwars-names.json'; //assert { type: "json" };
+'use strict';
 
-import uniqueRandomArray from 'unique-random-array'
+var uniqueRandomArray = require('unique-random-array');
+var starWarsNames = require('./starwars-names.json');
 
-// export const API={
-//   data:dataJSON,
-//   random: uniqueRandomArray(dataJSON)
-// }
-
-const starwarsNames={
-  data:dataJSON2,
-  random: uniqueRandomArray(dataJSON2)
-}
-
-//console.log(API.data)
-//console.log("------")
-//console.log((uniqueRandomArray(API.data)()))
-//export default API
-
-export default starwarsNames;
+module.exports = {
+  all: starWarsNames,
+  random: uniqueRandomArray(starWarsNames)
+};
