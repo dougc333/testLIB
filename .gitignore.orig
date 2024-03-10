@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+node_modules/
+.nyc_output/
+coverage/
+dist/
+coverage/lcov-report/index.html
+coverage/lcov-report/index.js.html
+=======
+node_modules
+.nyc_output/
+coverage/
+dist/
+>>>>>>> step6_babel
