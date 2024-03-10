@@ -1,0 +1,26 @@
+add linting. Hard to test this. adding linting rules
+npm run lint, get rid of assert in get_data.js, index.js. 
+
+the linting rules conflict with node. node requires assert but eslint calls this an error. 
+
+import data from './MOCK_DATA.json' assert { type: "json" }
+which has an assert which is not necessary for node 18. But node generates an error message without it in different versions of node. 
+
+eslint rule conflicts with node, need the assert
+testLIB git:(step4_linting) ✗ node src/index.js     
+node:internal/errors:496
+    ErrorCaptureStackTrace(err);
+    ^
+
+TypeError [ERR_IMPORT_ASSERTION_TYPE_MISSING]: Module "file:///Users/dc/testLIB/src/MOCK_DATA.json" needs an import assertion of type "json"
+
+
+import dataJSON from './MOCK_DATA.json' assert { type: "json" };
+
+(node:69436) ExperimentalWarning: Import assertions are not a stable feature of the JavaScript language. Avoid relying on their current behavior and syntax as those might change in a future version of Node.js.
+
+
+git commit -am "asdfas" --no-verify to skip githooks
+
+
+
