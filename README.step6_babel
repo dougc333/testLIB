@@ -1,0 +1,57 @@
+
+
+
+es6=es2015
+
+es6 modules. async, await
+put config in package.json vs. .babelrc
+2015 presets for modules
+react presets which arent here are for jsx
+
+Parsing error: The keyword 'import' is reservedeslint
+No quick fixes available
+Add to .eslintrc:
+  "parserOptions": {
+    "sourceType": "module"
+  },
+This version doesnt work. import error for mocha
+src/index.js -> dist/index.js
+/Users/dc/testLIB/src/index.test.js:1
+import  {expect} from 'chai'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1274:20)
+    at Module._compile (node:internal/modules/cjs/loader:1320:27)
+    at Module.replacementCompile (/Users/dc/testLIB/node_modules/append-transform/index.js:60:13)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Object.<anonymous> (/Users/dc/testLIB/node_modules/append-transform/index.js:64:4)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at /Users/dc/testLIB/node_modules/mocha/lib/mocha.js:220:27
+    at Array.forEach (<anonymous>)
+    at Mocha.loadFiles (/Users/dc/testLIB/node_modules/mocha/lib/mocha.js:217:14)
+    at Mocha.run (/Users/dc/testLIB/node_modules/mocha/lib/mocha.js:485:10)
+    at Object.<anonymous> (/Users/dc/testLIB/node_modules/mocha/bin/_mocha:405:18)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Module.replacementCompile (/Users/dc/testLIB/node_modules/append-transform/index.js:60:13)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Object.<anonymous> (/Users/dc/testLIB/node_modules/append-transform/index.js:64:4)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v18.19.1
+ERROR: Coverage for lines (0%) does not meet global threshold (10%)
+ERROR: Coverage for statements (0%) does not meet global threshold (10%)
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |      100 |     100 |       0 |                   
+ index.js |       0 |      100 |     100 |       0 | 6-12              
+----------|---------|----------|---------|---------|-------------------
+ERROR: "test" exited with 1.

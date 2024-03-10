@@ -1,7 +1,5 @@
-'use strict';
-
-var expect = require('chai').expect;
-var starWarsNames = require('.');
+import  {expect} from 'chai'
+import starWarsNames from '.';
 
 describe('starwars-names', function() {
   it('should have a list of all available names', function() {
