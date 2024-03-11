@@ -44,3 +44,21 @@ This is different than browser code running in node using ES6. CJS is not suppor
 # step4: add linter
 
 the problem is there is no easy way to debug eslint rules. There has to be source code option to tell you which rule is being processed when error is generated
+
+nyc config in package.json.
+nyc and mocha have a problem with import which requires intercepting the transpilation and using babel-register to fix
+
+# step5
+ 
+git hooks. Add before commit npm run validate. To delete this remoe .git/hooks
+
+# step6
+
+babel install, put config in package.json which is bad idea. 
+use .babelrc so people know where to look for it
+
+# step 7
+
+webpack install.
+
+travis install. copy and paste .travis.yml from other projects
