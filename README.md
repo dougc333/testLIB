@@ -1,7 +1,7 @@
 #TestLib
 
 
-testing npm library framework js
+testing npm library framework js. 
 
 
 Some clarity on CJS and ESM. The website searches and YT content is outdated and most of it is non functional. 
