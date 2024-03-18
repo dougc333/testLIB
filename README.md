@@ -1,7 +1,9 @@
-#TestLib
+# TestLib
+Test npm framework for datascience stuff
+
+1) formatting data from csv to JSON. 
 
 
-testing npm library framework js. 
 
 
 Some clarity on CJS and ESM. The website searches and YT content is outdated and most of it is non functional. 
@@ -14,6 +16,7 @@ added save-exact true which locks down installed packages to a specific version
 number like fs=3.4.5 instead of fs=^3.4.5 
 review .npmrc
 Careful: there are potential conflicts when NPM looks into this file for variables
+make sure you use the same email for github and npm accounts. 
 
 `
 npm config set init-license "MIT"
